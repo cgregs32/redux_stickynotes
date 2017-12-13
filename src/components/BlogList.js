@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Blog from './Blog';
-import { List } from 'semantic-ui-react';
+import { List, Grid } from 'semantic-ui-react';
 
 const BlogList = ({ blogs }) => (
-  <List>
+  <Grid columns='equal'>
     {blogs.map(t => <Blog key={t.id} {...t} /> )}
-  </List>
+  </Grid>
 )
 
 const mapStateToProps = (state) => {
